@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electric Vechile(EV) Intrusion Detection</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1606925797300-0c4f4f5f1d9b');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            margin: 50px auto;
+            width: 400px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px black;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+        }
+
+        input:focus {
+            background-color: #e0f7fa;
+        }
+
+        button {
+            width: 95%;
+            padding: 12px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 10px;
+            background-color: #00c853;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #009624;
+        }
+
+        h3 {
+            margin-top: 20px;
+            color: #ffeb3b;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>🚗 EV Intrusion Detection System</h2>
+
+<form action="/predict" method="post">
+<input name="f1" placeholder="Timestamp"><br>
+<input name="f2" placeholder="CAN_ID"><br>
+<input name="f3" placeholder="DLC"><br>
+<input name="f4" placeholder="Data0"><br>
+<input name="f5" placeholder="Data1"><br>
+<input name="f6" placeholder="Data2"><br>
+<input name="f7" placeholder="Data3"><br>
+<input name="f8" placeholder="Data4"><br>
+<input name="f9" placeholder="Data5"><br>
+<input name="f10" placeholder="Data6"><br>
+<input name="f11" placeholder="Data7"><br>
+
+<button type="submit">Predict</button>
+</form>
+
+<h3>{{ prediction_text }}</h3>
+
+</div>
+
+</body>
+</html>
